@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">IMD BookStore</string>
+    <string name="come_ar">Começar</string>
+    <string name="login_se_cadastrado">Já é cadastrado? Fazer Login</string>
+    <string name="criar_conta">Criar Conta</string>
+    <string name="nome">Nome</string>
+    <string name="senha">Senha</string>
+    <string name="btn_criar_conta">Criar Conta</string>
+    <string name="tela_login">Login</string>
+    <string name="btn_login">Login</string>
+    <string name="esqueci_minha_senha">Esqueci minha senha</string>
+    <string name="ainda_n_o_tem_uma_conta">Ainda não tem uma conta?</string>
+</resources>
