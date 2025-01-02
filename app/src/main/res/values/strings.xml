@@ -13,4 +13,9 @@
     <string name="mudar_senha">Mudar Senha</string>
     <string name="btn_mudar_senha">Mudar Senha</string>
     <string name="nova_senha">Nova Senha</string>
+    <string name="seja_bem_vindo_a">Seja bem vindo(a),</string>
+    <string name="cadastrar_livro">Cadastrar Livro</string>
+    <string name="listar_livro">Listar Livros</string>
+    <string name="atualizar_livro">Atualizar Livro</string>
+    <string name="excluir_livro">Excluir Livro</string>
 </resources>
