@@ -65,6 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30.dp"
+        android:layout_marginBottom="19dp"
         android:height="60.dp"
         android:backgroundTint="#272727"
         android:cursorVisible="true"
@@ -75,16 +76,17 @@
         android:requiresFadingEdge="none"
         android:textSize="20sp"
         android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/tvSenha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="201dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/etSenha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30.dp"
+        android:layout_marginBottom="21dp"
         android:height="60.dp"
         android:backgroundTint="#272727"
         android:cursorVisible="true"
@@ -94,10 +96,10 @@
         android:labelFor="@id/tvSenha"
         android:textSize="20sp"
         android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="301dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tvEsqueceuSenha"

@@ -10,4 +10,7 @@
     <string name="btn_login">Login</string>
     <string name="esqueci_minha_senha">Esqueci minha senha</string>
     <string name="ainda_n_o_tem_uma_conta">Ainda não tem uma conta?</string>
+    <string name="mudar_senha">Mudar Senha</string>
+    <string name="btn_mudar_senha">Mudar Senha</string>
+    <string name="nova_senha">Nova Senha</string>
 </resources>
