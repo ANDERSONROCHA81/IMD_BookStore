@@ -18,4 +18,10 @@
     <string name="listar_livro">Listar Livros</string>
     <string name="atualizar_livro">Atualizar Livro</string>
     <string name="excluir_livro">Excluir Livro</string>
+    <string name="titulo">Título</string>
+    <string name="autor">Autor</string>
+    <string name="editora">Editora</string>
+    <string name="isbn">ISBN</string>
+    <string name="descricao">Descrição</string>
+    <string name="url_imagem_capa">URL da Imagem da Capa do Livro</string>
 </resources>
