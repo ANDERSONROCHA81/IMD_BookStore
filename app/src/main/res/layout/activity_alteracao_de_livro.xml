@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlteracaoDeLivroActivity">
+
+    <TextView
+        android:id="@+id/tvAlteracaoLivro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/acme"
+        android:text="@string/atualizar_livro"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="130dp"
+        android:fontFamily="@font/acme"
+        android:text="@string/titulo"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30.dp"
+        android:layout_marginTop="5dp"
+        android:height="60.dp"
+        android:backgroundTint="#272727"
+        android:cursorVisible="true"
+        android:ems="10"
+        android:enabled="false"
+        android:fontFamily="@font/acme"
+        android:inputType="text"
+        android:labelFor="@id/tvTitulo"
+        android:requiresFadingEdge="none"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <TextView
+        android:id="@+id/tvAutor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/acme"
+        android:text="@string/autor"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTitulo" />
+
+    <EditText
+        android:id="@+id/etAutor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30.dp"
+        android:layout_marginTop="5dp"
+        android:height="60.dp"
+        android:backgroundTint="#272727"
+        android:cursorVisible="true"
+        android:ems="10"
+        android:enabled="false"
+        android:fontFamily="@font/acme"
+        android:inputType="text"
+        android:labelFor="@id/tvAutor"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAutor" />
+
+
+    <Button
+        android:id="@+id/btnAtualizarLivro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30.dp"
+        android:layout_marginTop="340dp"
+        android:height="60.dp"
+        android:backgroundTint="#86C144"
+        android:fontFamily="@font/acme"
+        android:text="@string/atualizar_livro"
+        android:textSize="24.sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAutor" />
+
+    <TextView
+        android:id="@+id/tvEditora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/acme"
+        android:text="@string/editora"
+        android:textSize="20.sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAutor" />
+
+    <EditText
+        android:id="@+id/etEditora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30.dp"
+        android:layout_marginTop="5dp"
+        android:height="60.dp"
+        android:backgroundTint="#272727"
+        android:cursorVisible="true"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEditora" />
+
+    <TextView
+        android:id="@+id/tvISBN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/acme"
+        android:text="@string/isbn"
+        android:textSize="20.sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEditora" />
+
+    <EditText
+        android:id="@+id/etISBN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30.dp"
+        android:layout_marginTop="5dp"
+        android:height="60.dp"
+        android:backgroundTint="#272727"
+        android:cursorVisible="true"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvISBN" />
+
+    <TextView
+        android:id="@+id/tvDescricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/acme"
+        android:text="@string/descricao"
+        android:textSize="20.sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etISBN" />
+
+    <EditText
+        android:id="@+id/etDescricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30.dp"
+        android:layout_marginTop="5dp"
+        android:height="60.dp"
+        android:backgroundTint="#272727"
+        android:cursorVisible="true"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescricao" />
+
+    <TextView
+        android:id="@+id/tvURL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/acme"
+        android:text="@string/url_imagem_capa"
+        android:textSize="20.sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDescricao" />
+
+    <EditText
+        android:id="@+id/etURL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30.dp"
+        android:layout_marginTop="5dp"
+        android:height="60.dp"
+        android:backgroundTint="#272727"
+        android:cursorVisible="true"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textUri"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvURL" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
