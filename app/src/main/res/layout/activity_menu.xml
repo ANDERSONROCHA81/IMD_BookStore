@@ -86,7 +86,7 @@
         android:layout_marginStart="47dp"
         android:layout_marginTop="36dp"
         android:fontFamily="@font/acme"
-        android:text="@string/listar_livro"
+        android:text="@string/listar_livros"
         android:textSize="22.sp"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/divider1" />

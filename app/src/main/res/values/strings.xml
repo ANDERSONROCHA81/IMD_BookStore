@@ -15,7 +15,7 @@
     <string name="nova_senha">Nova Senha</string>
     <string name="seja_bem_vindo_a">Seja bem vindo(a),</string>
     <string name="cadastrar_livro">Cadastrar Livro</string>
-    <string name="listar_livro">Listar Livros</string>
+    <string name="listar_livros">Listagem de Livros</string>
     <string name="atualizar_livro">Atualizar Livro</string>
     <string name="excluir_livro">Excluir Livro</string>
     <string name="titulo">Título</string>
