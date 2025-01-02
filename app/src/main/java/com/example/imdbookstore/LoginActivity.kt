@@ -17,7 +17,8 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnLogin.setOnClickListener {
-
+            val telaMenu = Intent(this, MenuActivity::class.java)
+            startActivity(telaMenu)
         }
 
         binding.tvEsqueceuSenha.setOnClickListener {
