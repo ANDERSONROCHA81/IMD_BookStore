@@ -1,11 +1,11 @@
 package com.example.imdbookstore
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.imdbookstore.OperacoesComUsuarios.salvarUsuario
 import com.example.imdbookstore.databinding.ActivityCadastroBinding
 
 class CadastroActivity : AppCompatActivity() {
@@ -31,12 +31,5 @@ class CadastroActivity : AppCompatActivity() {
                 Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_LONG).show()
             }
         }
-    }
-
-    fun salvarUsuario(context: Context, senha: String, nomeUsuario: String) {
-        val sharedPreferences = context.getSharedPreferences("Usuarios", Context.MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        editor.putString(senha, nomeUsuario)
-        editor.apply()
     }
 }
