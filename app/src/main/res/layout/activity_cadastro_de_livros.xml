@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="150dp"
         android:fontFamily="@font/acme"
         android:text="@string/titulo"
         android:textSize="20sp"
@@ -91,15 +91,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30.dp"
-        android:layout_marginTop="340dp"
+        android:layout_marginTop="21dp"
         android:height="60.dp"
         android:backgroundTint="#86C144"
         android:fontFamily="@font/acme"
         android:text="@string/cadastrar_livro"
         android:textSize="24.sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etAutor" />
+        app:layout_constraintTop_toBottomOf="@+id/etURL" />
 
     <TextView
         android:id="@+id/tvEditora"
