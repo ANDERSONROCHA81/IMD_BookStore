@@ -14,6 +14,7 @@ class CadastroDeLivrosActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        bancoDeDados = BancoDeDados(this)
         enableEdgeToEdge()
         binding = ActivityCadastroDeLivrosBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -29,7 +30,13 @@ class CadastroDeLivrosActivity : AppCompatActivity() {
             if (titulo.isNotEmpty() && autor.isNotEmpty() && editora.isNotEmpty()
                 && isbn.isNotEmpty() && descricao.isNotEmpty() && url.isNotEmpty()
             ) {
-                bancoDeDados.salvarLivro(isbn.toInt(), titulo, autor, editora, descricao, url)
+                bancoDeDados.save(isbn.toInt(), titulo, autor, editora, descricao, url)
+                binding.etTitulo.setText(getString(R.string.campo_vazio))
+                binding.etAutor.setText(getString(R.string.campo_vazio))
+                binding.etEditora.setText(getString(R.string.campo_vazio))
+                binding.etISBN.setText(getString(R.string.campo_vazio))
+                binding.etDescricao.setText(getString(R.string.campo_vazio))
+                binding.etURL.setText(getString(R.string.campo_vazio))
                 Toast.makeText(this, "Livro cadastrado com sucesso", Toast.LENGTH_LONG).show()
             }else{
                 Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_LONG).show()

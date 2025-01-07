@@ -25,4 +25,5 @@
     <string name="descricao">Descrição</string>
     <string name="url_imagem_capa">URL da Imagem da Capa do Livro</string>
     <string name="nome_usuario">""</string>
+    <string name="campo_vazio">""</string>
 </resources>

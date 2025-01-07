@@ -29,10 +29,10 @@ class BancoDeDados(contexto: Context) : SQLiteOpenHelper(contexto, NOME, null, V
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        TODO("Not yet implemented")
+
     }
 
-    fun salvarLivro(
+    fun save(
         isbn: Int,
         titulo: String,
         autor: String,
@@ -53,7 +53,7 @@ class BancoDeDados(contexto: Context) : SQLiteOpenHelper(contexto, NOME, null, V
         return resultado
     }
 
-    fun listarTodosOsLivros() : ArrayList<Livro>{
+    fun listAll() : ArrayList<Livro>{
         val banco = this.readableDatabase
         var cursor = banco.rawQuery("SELECT * FROM livros", null)
         var array = ArrayList<Livro>()

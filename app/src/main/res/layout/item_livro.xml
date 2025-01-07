@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="10.dp">
 
     <ImageView
         android:id="@+id/ivLivro"
@@ -19,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/acme"
-        android:textSize="34.sp"
+        android:textSize="28.sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/ivLivro"
@@ -30,12 +31,11 @@
         android:id="@+id/tvEditoraLivro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:layout_marginBottom="17dp"
         android:fontFamily="@font/acme"
         android:textSize="24.sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tvIsbnLivro"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/ivLivro"
         tools:text="Editora" />
 
@@ -43,14 +43,12 @@
         android:id="@+id/tvIsbnLivro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="50dp"
         android:layout_marginBottom="17dp"
         android:fontFamily="@font/acme"
         android:textSize="24.sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvEditoraLivro"
         tools:text="ISBN" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
