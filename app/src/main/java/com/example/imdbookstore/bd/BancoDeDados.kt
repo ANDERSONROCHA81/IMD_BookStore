@@ -53,11 +53,11 @@ class BancoDeDados(contexto: Context) : SQLiteOpenHelper(contexto, NOME, null, V
         return resultado
     }
 
-    fun listAll() : ArrayList<Livro>{
+    fun listAll(): ArrayList<Livro> {
         val banco = this.readableDatabase
         var cursor = banco.rawQuery("SELECT * FROM livros", null)
         var array = ArrayList<Livro>()
-        if (cursor.count > 0){
+        if (cursor.count > 0) {
             cursor.moveToFirst()
             do {
                 var isbn = cursor.getInt(0)
@@ -67,10 +67,51 @@ class BancoDeDados(contexto: Context) : SQLiteOpenHelper(contexto, NOME, null, V
                 var descricao = cursor.getString(4)
                 var urlImagemLivro = cursor.getString(5)
                 array.add(Livro(titulo, autor, editora, isbn, descricao, urlImagemLivro))
-            }while (cursor.moveToNext())
+            } while (cursor.moveToNext())
         }
         cursor.close()
         banco.close()
         return array
+    }
+
+    fun update(
+        isbn: Int,
+        titulo: String,
+        autor: String,
+        editora: String,
+        descricao: String,
+        urlImagemLivro: String
+    ): Int {
+        val banco = this.writableDatabase
+        val container = ContentValues()
+        container.put("isbn", isbn)
+        container.put("titulo", titulo)
+        container.put("autor", autor)
+        container.put("editora", editora)
+        container.put("descricao", descricao)
+        container.put("urlImagemLivro", urlImagemLivro)
+        var result = banco.update("livros", container, "isbn=$isbn", null)
+        banco.close()
+        return result
+    }
+
+    fun findByIsbn(isbn: Int): Livro {
+        val banco = this.readableDatabase
+        var cursor = banco.rawQuery("SELECT * FROM livros WHERE isbn=$isbn", null)
+        var livro = Livro("", "", "", 0, "", "")
+        if (cursor.count > 0) {
+            cursor.moveToFirst()
+            do {
+                var titulo = cursor.getString(1)
+                var autor = cursor.getString(2)
+                var editora = cursor.getString(3)
+                var descricao = cursor.getString(4)
+                var urlImagemLivro = cursor.getString(5)
+                livro = Livro(titulo, autor, editora, isbn, descricao, urlImagemLivro)
+            } while (cursor.moveToNext())
+        }
+        cursor.close()
+        banco.close()
+        return livro;
     }
 }

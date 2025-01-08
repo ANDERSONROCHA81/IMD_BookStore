@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etTitulo"
+        android:id="@+id/etTitulo2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30.dp"
@@ -42,7 +42,7 @@
         android:backgroundTint="#272727"
         android:cursorVisible="true"
         android:ems="10"
-        android:enabled="false"
+        android:enabled="true"
         android:fontFamily="@font/acme"
         android:inputType="text"
         android:labelFor="@id/tvTitulo"
@@ -64,10 +64,10 @@
         android:text="@string/autor"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTitulo" />
+        app:layout_constraintTop_toBottomOf="@+id/etTitulo2" />
 
     <EditText
-        android:id="@+id/etAutor"
+        android:id="@+id/etAutor2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30.dp"
@@ -76,7 +76,7 @@
         android:backgroundTint="#272727"
         android:cursorVisible="true"
         android:ems="10"
-        android:enabled="false"
+        android:enabled="true"
         android:fontFamily="@font/acme"
         android:inputType="text"
         android:labelFor="@id/tvAutor"
@@ -102,7 +102,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etURL" />
+        app:layout_constraintTop_toBottomOf="@+id/etURL2" />
 
     <TextView
         android:id="@+id/tvEditora"
@@ -114,19 +114,19 @@
         android:text="@string/editora"
         android:textSize="20.sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etAutor" />
+        app:layout_constraintTop_toBottomOf="@+id/etAutor2" />
 
     <EditText
-        android:id="@+id/etEditora"
+        android:id="@+id/etEditora2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30.dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="6dp"
         android:height="60.dp"
         android:backgroundTint="#272727"
         android:cursorVisible="true"
         android:ems="10"
-        android:enabled="false"
+        android:enabled="true"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -143,10 +143,10 @@
         android:text="@string/isbn"
         android:textSize="20.sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEditora" />
+        app:layout_constraintTop_toBottomOf="@+id/etEditora2" />
 
     <EditText
-        android:id="@+id/etISBN"
+        android:id="@+id/etISBN2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30.dp"
@@ -155,6 +155,7 @@
         android:backgroundTint="#272727"
         android:cursorVisible="true"
         android:ems="10"
+        android:enabled="true"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -171,19 +172,19 @@
         android:text="@string/descricao"
         android:textSize="20.sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etISBN" />
+        app:layout_constraintTop_toBottomOf="@+id/etISBN2" />
 
     <EditText
-        android:id="@+id/etDescricao"
+        android:id="@+id/etDescricao2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30.dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="4dp"
         android:height="60.dp"
         android:backgroundTint="#272727"
         android:cursorVisible="true"
         android:ems="10"
-        android:enabled="false"
+        android:enabled="true"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -200,10 +201,10 @@
         android:text="@string/url_imagem_capa"
         android:textSize="20.sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDescricao" />
+        app:layout_constraintTop_toBottomOf="@+id/etDescricao2" />
 
     <EditText
-        android:id="@+id/etURL"
+        android:id="@+id/etURL2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30.dp"
@@ -212,7 +213,7 @@
         android:backgroundTint="#272727"
         android:cursorVisible="true"
         android:ems="10"
-        android:enabled="false"
+        android:enabled="true"
         android:inputType="textUri"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

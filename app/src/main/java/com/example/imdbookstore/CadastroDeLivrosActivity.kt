@@ -1,5 +1,6 @@
 package com.example.imdbookstore
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -38,6 +39,8 @@ class CadastroDeLivrosActivity : AppCompatActivity() {
                 binding.etDescricao.setText(getString(R.string.campo_vazio))
                 binding.etURL.setText(getString(R.string.campo_vazio))
                 Toast.makeText(this, "Livro cadastrado com sucesso", Toast.LENGTH_LONG).show()
+                val telaMenu = Intent(this, MenuActivity::class.java)
+                startActivity(telaMenu)
             }else{
                 Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_LONG).show()
             }
