@@ -114,4 +114,11 @@ class BancoDeDados(contexto: Context) : SQLiteOpenHelper(contexto, NOME, null, V
         banco.close()
         return livro;
     }
+
+    fun delete(isbn: Int) : Int{
+        val banco = this.writableDatabase
+        var resultado = banco.delete("livros", "isbn = $isbn", null)
+        banco.close()
+        return resultado
+    }
 }
