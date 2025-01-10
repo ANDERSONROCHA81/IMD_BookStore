@@ -1,5 +1,6 @@
 package com.example.imdbookstore
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.imdbookstore.adapter.LivroAdapter
 import com.example.imdbookstore.bd.BancoDeDados
 import com.example.imdbookstore.databinding.ActivityListagemDeLivrosBinding
+import com.example.imdbookstore.models.Livro
 
 class ListagemDeLivrosActivity : AppCompatActivity() {
 
@@ -26,9 +28,21 @@ class ListagemDeLivrosActivity : AppCompatActivity() {
     private fun initRecyclerView() {
         val recyclerView = binding.rvLivros
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = LivroAdapter(bancoDeDados.listAll())
+        recyclerView.adapter =
+            LivroAdapter(bancoDeDados.listAll()) { livro -> onItemSelected(livro) }
 
         val decoration = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
         recyclerView.addItemDecoration(decoration)
+    }
+
+    fun onItemSelected(livro: Livro) {
+        val telaInformacoes = Intent(this, DetalhamentoDoLivroActivity::class.java)
+        telaInformacoes.putExtra("titulo", livro.titulo)
+        telaInformacoes.putExtra("autor", livro.autor)
+        telaInformacoes.putExtra("editora", livro.editora)
+        telaInformacoes.putExtra("isbn", livro.isbn)
+        telaInformacoes.putExtra("descricao", livro.descricao)
+        telaInformacoes.putExtra("imagem", livro.urlImagemLivro)
+        startActivity(telaInformacoes)
     }
 }
