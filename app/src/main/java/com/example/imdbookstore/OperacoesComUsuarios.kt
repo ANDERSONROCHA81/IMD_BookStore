@@ -11,10 +11,10 @@ object OperacoesComUsuarios {
         editor.apply()
     }
 
-    fun recuperarUsuario(context: Context, nomeUsuario: String): String {
+    fun recuperarUsuario(context: Context, nomeUsuario: String): String? {
         val sheredPreferences = context.getSharedPreferences("Usuarios", Context.MODE_PRIVATE)
         val usuario = sheredPreferences.getString(nomeUsuario, null)
-        return usuario.toString()
+        return usuario
     }
 
     fun excluirUsuario(context: Context, nomeUsuario: String) {

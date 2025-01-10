@@ -25,7 +25,7 @@ class TrocarSenhaActivity : AppCompatActivity() {
             var senhaUsuario = recuperarUsuario(this, nome)
 
             if (nome.isNotEmpty() && novaSenha.isNotEmpty()) {
-                if (senhaUsuario.isNotEmpty()) {
+                if (!senhaUsuario.isNullOrEmpty()) {
                     salvarUsuario(this, novaSenha, nome)
                     Toast.makeText(this, "Senha alterada com sucesso", Toast.LENGTH_LONG).show()
                     val telaLogin = Intent(this, LoginActivity::class.java)

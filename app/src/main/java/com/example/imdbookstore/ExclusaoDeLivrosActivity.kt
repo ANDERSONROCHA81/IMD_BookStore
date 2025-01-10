@@ -23,7 +23,6 @@ class ExclusaoDeLivrosActivity : AppCompatActivity() {
         binding.btnExcluirLivro.setOnClickListener {
             var isbn = binding.etISBN3.text.toString()
             var livro = bancoDeDados.findByIsbn(isbn.toInt())
-            println(isbn)
 
             when (isbn) {
                 "" -> Toast.makeText(this, "Informe o ISBN do livro", Toast.LENGTH_LONG).show()

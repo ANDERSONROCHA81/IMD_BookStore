@@ -112,7 +112,7 @@ class BancoDeDados(contexto: Context) : SQLiteOpenHelper(contexto, NOME, null, V
         }
         cursor.close()
         banco.close()
-        return livro;
+        return livro
     }
 
     fun delete(isbn: Int): Int {
