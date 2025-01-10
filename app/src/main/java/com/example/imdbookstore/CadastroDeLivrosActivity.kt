@@ -41,7 +41,7 @@ class CadastroDeLivrosActivity : AppCompatActivity() {
                 Toast.makeText(this, "Livro cadastrado com sucesso", Toast.LENGTH_LONG).show()
                 val telaMenu = Intent(this, MenuActivity::class.java)
                 startActivity(telaMenu)
-            }else{
+            } else {
                 Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_LONG).show()
             }
         }

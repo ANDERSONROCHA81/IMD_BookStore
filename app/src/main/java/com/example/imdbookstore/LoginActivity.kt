@@ -27,8 +27,9 @@ class LoginActivity : AppCompatActivity() {
                 if (senha == senhaUsuario) {
                     Toast.makeText(this, "Usuário logado com sucesso", Toast.LENGTH_LONG).show()
                     val telaMenu = Intent(this, MenuActivity::class.java)
+                    telaMenu.putExtra("nome", nome)
                     startActivity(telaMenu)
-                }else{
+                } else {
                     Toast.makeText(this, "Usuário não encontrado", Toast.LENGTH_LONG).show()
                 }
             } else {

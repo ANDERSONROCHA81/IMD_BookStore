@@ -16,6 +16,9 @@ class MenuActivity : AppCompatActivity() {
         binding = ActivityMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val dadosUsuario = intent.extras
+        binding.tvNomeUsuario.text = dadosUsuario?.getString("nome")
+
         binding.tvCadastrar.setOnClickListener {
             val telaCadastro = Intent(this, CadastroDeLivrosActivity::class.java)
             startActivity(telaCadastro)

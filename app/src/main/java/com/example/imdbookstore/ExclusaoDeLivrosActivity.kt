@@ -25,7 +25,7 @@ class ExclusaoDeLivrosActivity : AppCompatActivity() {
             var livro = bancoDeDados.findByIsbn(isbn.toInt())
             println(isbn)
 
-            when(isbn){
+            when (isbn) {
                 "" -> Toast.makeText(this, "Informe o ISBN do livro", Toast.LENGTH_LONG).show()
                 livro.isbn.toString() -> {
                     bancoDeDados.delete(isbn.toInt())
@@ -34,20 +34,9 @@ class ExclusaoDeLivrosActivity : AppCompatActivity() {
                     val telaMenu = Intent(this, MenuActivity::class.java)
                     startActivity(telaMenu)
                 }
+
                 else -> Toast.makeText(this, "Livro não encontrado", Toast.LENGTH_LONG).show()
             }
-
-//            if (isbn.isNotEmpty() && (isbn.toInt() == livro.isbn)) {
-//                bancoDeDados.delete(isbn.toInt())
-//                binding.etISBN3.setText(getString(R.string.campo_vazio))
-//                Toast.makeText(this, "Livro excluído com sucesso", Toast.LENGTH_LONG).show()
-//                val telaMenu = Intent(this, MenuActivity::class.java)
-//                startActivity(telaMenu)
-//            } else if (isbn.isNotEmpty() && (isbn.toInt() != livro.isbn)) {
-//                Toast.makeText(this, "Livro não encontrado", Toast.LENGTH_LONG).show()
-//            } else {
-//                Toast.makeText(this, "Informe o ISBN do livro", Toast.LENGTH_LONG).show()
-//            }
         }
     }
 }
