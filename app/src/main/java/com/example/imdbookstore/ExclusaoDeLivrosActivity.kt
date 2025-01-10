@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.text.isDigitsOnly
 import com.example.imdbookstore.bd.BancoDeDados
 import com.example.imdbookstore.databinding.ActivityExclusaoDeLivrosBinding
 
@@ -22,19 +23,21 @@ class ExclusaoDeLivrosActivity : AppCompatActivity() {
 
         binding.btnExcluirLivro.setOnClickListener {
             var isbn = binding.etISBN3.text.toString()
-            var livro = bancoDeDados.findByIsbn(isbn.toInt())
 
-            when (isbn) {
-                "" -> Toast.makeText(this, "Informe o ISBN do livro", Toast.LENGTH_LONG).show()
-                livro.isbn.toString() -> {
+            if (isbn.isNotEmpty()) {
+                var livro = bancoDeDados.findByIsbn(isbn.toInt())
+
+                if (isbn == livro.isbn.toString()) {
                     bancoDeDados.delete(isbn.toInt())
                     binding.etISBN3.setText(getString(R.string.campo_vazio))
                     Toast.makeText(this, "Livro excluído com sucesso", Toast.LENGTH_LONG).show()
                     val telaMenu = Intent(this, MenuActivity::class.java)
                     startActivity(telaMenu)
+                } else {
+                    Toast.makeText(this, "Livro não encontrado", Toast.LENGTH_LONG).show()
                 }
-
-                else -> Toast.makeText(this, "Livro não encontrado", Toast.LENGTH_LONG).show()
+            } else {
+                Toast.makeText(this, "Informe o ISBN do livro", Toast.LENGTH_LONG).show()
             }
         }
     }

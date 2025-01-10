@@ -27,11 +27,12 @@ class AlteracaoDeLivroActivity : AppCompatActivity() {
             var isbn = binding.etISBN2.text.toString()
             var descricao = binding.etDescricao2.text.toString()
             var url = binding.etURL2.text.toString()
-            var livro = bancoDeDados.findByIsbn(isbn.toInt())
 
             if (titulo.isNotEmpty() && autor.isNotEmpty() && editora.isNotEmpty()
                 && isbn.isNotEmpty() && descricao.isNotEmpty() && url.isNotEmpty()
             ) {
+                var livro = bancoDeDados.findByIsbn(isbn.toInt())
+
                 if (livro.isbn == isbn.toInt()) {
                     bancoDeDados.update(isbn.toInt(), titulo, autor, editora, descricao, url)
                     binding.etTitulo2.setText(getString(R.string.campo_vazio))
