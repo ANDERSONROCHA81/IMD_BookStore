@@ -25,11 +25,11 @@ class DetalhamentoDoLivroActivity : AppCompatActivity() {
         var descricao = informacoes?.getString("descricao")
         var imagem = informacoes?.getString("imagem")
 
-        binding.tvInfoTitulo.text = titulo
-        binding.tvInfoAutor.text = autor
-        binding.tvInfoEditora.text = editora
-        binding.tvInfoISBN.text = isbn.toString()
-        binding.tvInfoDescricao.text = descricao
+        binding.tvInfoTitulo2.text = titulo
+        binding.tvInfoAutor2.text = autor
+        binding.tvInfoEditora2.text = editora
+        binding.tvInfoISBN2.text = isbn.toString()
+        binding.tvInfoDescricao2.text = descricao
         Glide.with(binding.ivInfoCapa.context).load(imagem).into(binding.ivInfoCapa)
 
         binding.btnVoltarLivros.setOnClickListener {

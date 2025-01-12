@@ -26,6 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30.dp"
+        android:layout_marginBottom="50dp"
         android:height="60.dp"
         android:backgroundTint="#86C144"
         android:fontFamily="@font/acme"
@@ -34,23 +35,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvInfoDescricao"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tvInfoISBN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="31dp"
         android:fontFamily="@font/acme"
+        android:text="@string/isbn"
         android:textSize="28.sp"
-        app:layout_constraintBottom_toTopOf="@+id/tvInfoDescricao"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvInfoEditora"
-        app:layout_constraintVertical_bias="0.5"
-        tools:text="ISBN" />
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoEditora" />
 
     <ImageView
         android:id="@+id/ivInfoCapa"
@@ -68,56 +65,108 @@
         android:id="@+id/tvInfoTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="210dp"
         android:fontFamily="@font/acme"
+        android:text="@string/titulo"
         android:textSize="28.sp"
-        app:layout_constraintBottom_toTopOf="@+id/tvInfoAutor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivInfoCapa"
-        app:layout_constraintVertical_bias="0.5"
-        tools:text="Titulo" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDetalhesLivro" />
 
     <TextView
         android:id="@+id/tvInfoAutor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="31dp"
         android:fontFamily="@font/acme"
+        android:text="@string/autor"
         android:textSize="28.sp"
-        app:layout_constraintBottom_toTopOf="@+id/tvInfoEditora"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvInfoTitulo"
-        app:layout_constraintVertical_bias="0.5"
-        tools:text="Autor" />
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoTitulo" />
 
     <TextView
         android:id="@+id/tvInfoEditora"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="31dp"
         android:fontFamily="@font/acme"
+        android:text="@string/editora"
         android:textSize="28.sp"
-        app:layout_constraintBottom_toTopOf="@+id/tvInfoISBN"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvInfoAutor"
-        app:layout_constraintVertical_bias="0.5"
-        tools:text="Editora" />
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoAutor" />
 
     <TextView
         android:id="@+id/tvInfoDescricao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="31dp"
         android:fontFamily="@font/acme"
+        android:text="@string/descricao"
         android:textSize="28.sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnVoltarLivros"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvInfoISBN"
-        app:layout_constraintVertical_bias="0.5"
-        tools:text="Descricao" />
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoISBN" />
+
+    <TextView
+        android:id="@+id/tvInfoTitulo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="330dp"
+        android:fontFamily="@font/acme"
+        android:text="@string/info_titulo"
+        android:textSize="28.sp"
+        app:layout_constraintStart_toEndOf="@+id/tvInfoTitulo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvInfoAutor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="397dp"
+        android:fontFamily="@font/acme"
+        android:text="@string/info_autor"
+        android:textSize="28.sp"
+        app:layout_constraintStart_toEndOf="@+id/tvInfoAutor"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvInfoEditora2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="463dp"
+        android:fontFamily="@font/acme"
+        android:text="@string/info_editora"
+        android:textSize="28.sp"
+        app:layout_constraintStart_toEndOf="@+id/tvInfoEditora"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvInfoISBN2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="527dp"
+        android:fontFamily="@font/acme"
+        android:text="@string/info_isbn"
+        android:textSize="28.sp"
+        app:layout_constraintStart_toEndOf="@+id/tvInfoISBN"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvInfoDescricao2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="597dp"
+        android:fontFamily="@font/acme"
+        android:text="@string/info_descricao"
+        android:textSize="28.sp"
+        app:layout_constraintStart_toEndOf="@+id/tvInfoDescricao"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

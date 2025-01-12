@@ -28,4 +28,9 @@
     <string name="campo_vazio">""</string>
     <string name="detalhes_livro">Informações do Livro</string>
     <string name="voltar">Voltar</string>
+    <string name="info_titulo">""</string>
+    <string name="info_autor">""</string>
+    <string name="info_editora">""</string>
+    <string name="info_isbn">""</string>
+    <string name="info_descricao">""</string>
 </resources>

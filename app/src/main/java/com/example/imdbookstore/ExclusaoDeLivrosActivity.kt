@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.text.isDigitsOnly
 import com.example.imdbookstore.bd.BancoDeDados
 import com.example.imdbookstore.databinding.ActivityExclusaoDeLivrosBinding
 
